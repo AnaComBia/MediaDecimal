@@ -16,15 +16,17 @@ namespace MediaDecimal
             soma = 0;
             maior = 123.45M;
             menor = 678.91M;
-            NumeroUsuario = 0;
+            NumeroUsuario = 123.45M;
 
             int inicio = 0;
 
-            while (quantidadeAparece < inicio)
+            while (quantidadeAparece > inicio)
             {
                 inicio += 1;
-                Console.Write($"Número #{inicio}: ");
+                Console.Write($"\nNúmero #{inicio}: ");
                 NumeroUsuario = Convert.ToDecimal(Console.ReadLine());
+
+                soma = soma + NumeroUsuario;
 
                 if (inicio == 1)
                 {
@@ -48,14 +50,12 @@ namespace MediaDecimal
            }
            else
            {
-               media = NumeroUsuario / quantidadeAparece;
-               Console.WriteLine($"Média = {media}");
-
-               soma = soma + NumeroUsuario;
+               media = soma / quantidadeAparece;
+            
+               Console.WriteLine($"\nMédia = {media}");
                Console.WriteLine($"Soma = {soma}");
-
                Console.WriteLine($"Maior Número = {maior}");
-               Console.WriteLine($"Menor Número = {menor}");
+               Console.WriteLine($"Menor Número = {menor}\n");
 
 
            }
